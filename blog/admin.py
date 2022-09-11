@@ -7,5 +7,4 @@ from django_summernote.admin import SummernoteModelAdmin
 class PostAdmin(SummernoteModelAdmin):
     summernote_fields = ('content',)
 
-
 admin.site.register(Comment)
