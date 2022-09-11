@@ -16,12 +16,10 @@ body {
 }
 
 .masthead {
-    background: url("../images/d-book.jpg");
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* background: url("../images/d-book.jpg"); */
+    background-color: #3D2B1F;
     height: 200px;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
     box-shadow: 0 16px 48px #E3E7EB;
     padding-top: 10px;
 }
@@ -33,12 +31,21 @@ body {
 }
 
 .card {
-    box-shadow: 0 16px 48px #E3E7EB;
+    box-shadow: 0 16px 48px #3D2B1F;
 }
 
 .bg-color {
-    background-color: #fffdd0;
+    /* background-color: #3D2B1F; */
+    background: url("../images/d-book.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
     padding-bottom: 40px;
+}
+
+.navbar-color {
+    background-color: #3D2B1F;
+    position: sticky;
 }
 
 /* footer {
