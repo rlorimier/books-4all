@@ -16,36 +16,35 @@
     <body>
         
         <!-- Navigation -->
-        <!-- navbar-light bg-light -->
         <nav class="navbar-color navbar navbar-expand-lg shadow sticky-top" id="mainNav">
             <div class="container-fluid">
-                <a class="navbar-brand text-dark" href="{% url 'index' %}">Book Club</a>
+                <a class="navbar-brand text-light" href="{% url 'index' %}">Book Club</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="navbarResponsive"
                     aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item text-dark">
-                            <a class="nav-link text-dark font-weight-bold" href="{% url 'index' %}">Home</a>
+                        <li class="nav-item text-light">
+                            <a class="nav-link text-light font-weight-bold" href="{% url 'index' %}">Home</a>
                         </li>
-                        <li class="nav-item text-dark">
-                            <a class="nav-link text-dark font-weight-bold" href="{% url 'about' %}">About</a>
+                        <li class="nav-item text-light">
+                            <a class="nav-link text-light font-weight-bold" href="{% url 'about' %}">About</a>
                         </li>
                         
                         {% if user.is_authenticated %}
-                        <li class="nav-item text-dark">
-                            <a class="nav-link text-dark font-weight-bold" href="{% url 'newpost' %}">New Post</a>
+                        <li class="nav-item text-light">
+                            <a class="nav-link text-light font-weight-bold" href="{% url 'newpost' %}">New Post</a>
                         </li>
-                        <li class="nav-item text-dark">
-                            <a class="nav-link text-dark font-weight-bold" href="{% url 'account_logout' %}">Logout</a>
+                        <li class="nav-item text-light">
+                            <a class="nav-link text-light font-weight-bold" href="{% url 'account_logout' %}">Logout</a>
                         </li>
                         {% else %}
-                        <li class="nav-item text-dark">
-                            <a class="nav-link text-dark font-weight-bold" href="{% url 'account_signup' %}">Register</a>
+                        <li class="nav-item text-light">
+                            <a class="nav-link text-light font-weight-bold" href="{% url 'account_signup' %}">Register</a>
                         </li>
-                        <li class="nav-item text-dark">
-                            <a class="nav-link text-dark font-weight-bold" href="{% url 'account_login' %}">Login</a>
+                        <li class="nav-item text-light">
+                            <a class="nav-link text-light font-weight-bold" href="{% url 'account_login' %}">Login</a>
                         </li>
                         {% endif %}
                     </ul>
@@ -60,8 +59,8 @@
                     <div class="row">
                         <div class="col-md-8 col-md-10 mx-auto">
                             <div class="head_text">
-                                <h2 class="head_text my-4 mt-3 text-dark"> Welcome to Book Club </h2>
-                                <h4 class="text-dark">We Love BOOKS As much as you do..! &nbsp</h4>
+                                <h2 class="head_text my-4 mt-3 text-light"> Welcome to Book Club </h2>
+                                <h4 class="text-light">We Love BOOKS As much as you do..! &nbsp</h4>
                             </div>
                         </div>
                     </div>
