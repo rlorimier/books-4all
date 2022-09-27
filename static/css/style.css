@@ -16,7 +16,6 @@ body {
 }
 
 .masthead {
-    /* background: url("../images/d-book.jpg"); */
     background-color: #3D2B1F;
     height: 200px;
     padding-bottom: 10px;
@@ -36,7 +35,7 @@ body {
 
 .bg-color {
     /* background-color: #3D2B1F; */
-    background: url("../images/d-book.jpg");
+    background: url("https://images.pexels.com/photos/2908984/pexels-photo-2908984.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
