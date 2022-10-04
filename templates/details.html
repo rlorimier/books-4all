@@ -30,6 +30,20 @@
 
         <p class="card-body card-text">{{ post.text|linebreaksbr }}</p>
       </div>
+
+      {% if user.is_authenticated %}
+        <form class="d-inline" action="{% url 'post_like' post.pk %}" method="POST">
+            {% csrf_token %}
+            {% if liked %}
+            <button type="submit" name="blogpost_id" value="{{post.pk}}" class="btn-like"><i class="fas fa-heart"></i></button>
+            {% else %}
+            <button type="submit" name="blogpost_id" value="{{post.pk}}" class="btn-like"><i class="far fa-heart"></i></button>
+            {% endif %}
+        </form>
+        {% else %}
+        <span class="text-secondary"><i class="far fa-heart"></i></span>
+        {% endif %}
+
       <p class="card-body card-text text-muted h6"><i class="far fa-heart"></i> {{ post.number_of_likes }}</p>
       <hr>
       <div class="card-body">

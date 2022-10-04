@@ -1,5 +1,6 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.utils import timezone
+from django.http import HttpResponseRedirect
 from .models import Post, Comment
 from .forms import PostForm, CommentForm
 
@@ -11,7 +12,10 @@ def index(request):
 
 def details(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    return render(request, 'details.html', {'post': post})
+    liked = False
+    if post.likes.filter.exists():
+        liked = True    
+    return render(request, 'details.html', {'post': post, 'liked': liked})
 
 
 def about(request):
@@ -62,3 +66,12 @@ def addcomment(request, pk):
         form = CommentForm(instance=post)
     return render(request, 'addcomment.html', {'form': form})
 
+
+def postlike(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    if post.likes.filter(id=request.user.id).exists():
+        post.likes.remove(request.user)
+    else:
+        post.likes.add(request.user)
+
+    return HttpResponseRedirect(reverse('details', pk=post.pk))

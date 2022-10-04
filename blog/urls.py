@@ -9,4 +9,5 @@ urlpatterns = [
     path('post/about/', views.about, name='about'),
     path('accounts/', include('allauth.urls')),
     path('post/<int:pk>/comment/', views.addcomment, name='addcomment'),
+    path('like/<int:pk>', views.postlike, name='post_like'),
 ]
